@@ -5,7 +5,31 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <header>
+      <h1>Express Users </h1>
 
+      <nav>
+        <a href="/">Home</a>
+        {{#if blahUser}}
+        <br>
+        <strong>{{blahUser.email}}</strong>
+        <br>
+        <a href="/room/add">Add a room</a>
+        <a href="/my-rooms">See Your Rooms</a>
+        <a href="/logout">Log Out</a>
+
+        {{#if blahUser.isAdmin}} 
+        <h3>Admin Zone</h3> 
+        <a href="/admin/users">Admin Users</a>
+        {{/if}}
+        {{else}}
+        <a href="/signup">Sign Up</a>
+        <a href="/login">Log In</a>
+        {{/if}}
+      </nav>
+    </header>
+
+    
     {{{body}}}
 
     <script src='/javascripts/script.js'></script>

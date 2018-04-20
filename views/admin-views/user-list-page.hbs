@@ -1,0 +1,18 @@
+<h2>Admin Zone</h2>
+
+<h2>User List</h2>
+
+
+<ul>
+  {{#each userList}}
+    <li>
+      <h3>{{this.fullName}}</h3>
+      <ul>
+        <li>Email: {{this.email}} </li>
+        <li>Google: {{this.googleID}} </li>
+        <li>GitHub: {{this.githubID}} </li>
+        <li>Role: {{this.role}} </li>    
+      </ul>
+    </li>
+  {{/each}}
+</ul>

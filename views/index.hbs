@@ -1,2 +1,14 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h2>Home Page</h2>
+
+{{> flashMessages}}
+
+{{#if blahUser}}
+  <p>Welcome, {{blahUser.fullName}}</p>
+  <p>Did you know you have been a member since {{blahUser.createdAt}}??</p>
+  {{else}}
+  <a href="/signup">Sign up now!</a>
+  <p>
+    already have n account?
+    <a href="/login">Log In</a>
+  </p>
+  {{/if}}
